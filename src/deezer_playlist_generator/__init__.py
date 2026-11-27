@@ -1,2 +1,5 @@
-def main() -> None:
-    print("Hello from deezer-playlist-generator!")
+"""Deezer playlist generator package."""
+
+from deezer_playlist_generator.create_playlist import main
+
+__all__ = ["main"]
