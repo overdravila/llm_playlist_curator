@@ -1,0 +1,29 @@
+[project]
+name = "deezer-playlist-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Andres Avila", email = "andresavilawille@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mcp>=2.3.0",
+    "mcp-deezer",
+]
+
+[project.scripts]
+deezer-playlist-generator = "deezer_playlist_generator:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "ruff>=0.17.6",
+]
+
+[tool.uv.sources]
+mcp-deezer = { git = "https://github.com/Benitoow/mcp-deezer.git", rev = "6a51719f91b5898f990b6b7d47e1cd3202d8d494" }
